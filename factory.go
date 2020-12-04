@@ -47,6 +47,7 @@ func createDefaultConfig() configmodels.Exporter {
 				NameVal: typeStr,
 			},
 			GRPCClientSettings: configgrpc.GRPCClientSettings{
+				Endpoint:        "oragent.orijtech.com:443",
 				WriteBufferSize: defaultWriteBufferSize,
 			},
 			NumWorkers: 2,

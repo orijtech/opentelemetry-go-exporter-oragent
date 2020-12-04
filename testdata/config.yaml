@@ -7,7 +7,6 @@ processors:
 exporters:
   oragent:
   oragent/2:
-    endpoint: "8.8.8.8:1234"
     api_key: "foo"
 
 service:
