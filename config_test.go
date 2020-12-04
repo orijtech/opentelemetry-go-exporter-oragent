@@ -47,7 +47,7 @@ func TestLoadConfig(t *testing.T) {
 					TypeVal: "oragent",
 				},
 				GRPCClientSettings: configgrpc.GRPCClientSettings{
-					Endpoint:        "8.8.8.8:1234",
+					Endpoint:        "oragent.orijtech.com:443",
 					WriteBufferSize: defaultWriteBufferSize,
 				},
 				NumWorkers: 2,
