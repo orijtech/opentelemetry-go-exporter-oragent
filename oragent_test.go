@@ -16,7 +16,6 @@ package oragentexporter
 
 import (
 	"context"
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -77,7 +76,7 @@ func TestSendTraces(t *testing.T) {
 		resourceSpans.At(0).InstrumentationLibrarySpans().At(0).Spans().Resize(numSpans)
 		for j := 0; j < numSpans; j++ {
 			span := resourceSpans.At(0).InstrumentationLibrarySpans().At(0).Spans().At(j)
-			span.SetName(fmt.Sprintf("oragent-%d", i))
+			span.SetName("oragent")
 		}
 		traces[i] = td
 	}
