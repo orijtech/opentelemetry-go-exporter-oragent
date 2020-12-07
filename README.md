@@ -8,6 +8,9 @@ Supported pipeline types: traces, metrics
 
 - `api_key` (required): API key uses for authentication.
 
+`api_key` can be set both from configuration file or from environment variable `ORAGENT_API_KEY`. If both are specified,
+the value from configuration file will be used.
+
 Other configs can be provided as the same manner with [OpenCensus Exporter](https://github.com/open-telemetry/opentelemetry-collector/blob/master/exporter/opencensusexporter/README.md)
 
 ### Example
