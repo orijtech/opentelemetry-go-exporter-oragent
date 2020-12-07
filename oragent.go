@@ -36,7 +36,10 @@ import (
 	"google.golang.org/grpc/metadata"
 )
 
-const authHeader = "x-oragent-auth"
+const (
+	authHeader = "x-oragent-auth"
+	apiKeyName = "ORAGENT_API_KEY"
+)
 
 type tracesClient struct {
 	agenttracepb.TraceService_ExportClient
@@ -66,8 +69,7 @@ func newOrExporter(ctx context.Context, cfg *Config) (*orExporter, error) {
 	if cfg.NumWorkers <= 0 {
 		return nil, errors.New("Oragent exporter cfg requires at least one worker")
 	}
-
-	if apiKey := os.Getenv("ORAGENT_API_KEY"); apiKey != "" {
+	if apiKey := os.Getenv(apiKeyName); cfg.APIKey == "" {
 		cfg.APIKey = apiKey
 	}
 	if cfg.APIKey == "" {
