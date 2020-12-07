@@ -15,6 +15,5 @@ Other configs can be provided as the same manner with [OpenCensus Exporter](http
 ```yaml
 exporters:
   oragent:
-    endpoint: "oragent.orijtech.com:443"
     api_key: "<YOUR_API_KEY>"
 ```
