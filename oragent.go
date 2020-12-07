@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Derived from OpenTelemetry exporter/opencensusexporter
+// https://github.com/open-telemetry/opentelemetry-collector/tree/master/exporter/opencensusexporter
+
 package oragentexporter
 
 import (
