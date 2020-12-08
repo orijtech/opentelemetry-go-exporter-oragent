@@ -15,7 +15,7 @@
 // Derived from OpenTelemetry exporter/opencensusexporter
 // https://github.com/open-telemetry/opentelemetry-collector/tree/master/exporter/opencensusexporter
 
-package oragentexporter
+package otelcollector
 
 import (
 	"context"
