@@ -1,0 +1,19 @@
+receivers:
+  opencensus:
+
+service:
+  pipelines:
+    traces:
+      receivers: [opencensus]
+      exporters: [oragent, logging]
+    metrics:
+      receivers: [opencensus]
+      exporters: [logging,oragent]
+
+exporters:
+  oragent:
+    api_key: "c642b883.1f8b.4b38.90b1.ee5757512989"
+    cert_file:
+    key_file:
+  logging:
+    loglevel: debug
